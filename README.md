@@ -102,7 +102,7 @@ This application is available on vercel:
 
 1. **Vercel Link**:
    
-   [https://english-typing-test-gray.vercel.app/]
+   [Open TypeShift](https://english-typing-test-gray.vercel.app/)
 
 ---
 
