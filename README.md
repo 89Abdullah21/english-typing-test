@@ -98,24 +98,11 @@ npm run start
 
 ## ☁️ Deploying to Vercel
 
-This application is optimized for one-click deployment on [Vercel](https://vercel.com/):
+This application is available on vercel:
 
-1. **Push to GitHub**:
-   Ensure your changes are pushed to your GitHub repository:
-   ```bash
-   git push origin main
-   ```
-
-2. **Import into Vercel**:
-   - Go to [Vercel](https://vercel.com/) and sign in with GitHub.
-   - Click **"Add New..."** > **"Project"**.
-   - Select the `english-typing-test` repository.
-
-3. **Deploy**:
-   - Vercel automatically detects Next.js.
-   - Leave the default build settings (`npm run build` and output directory `.next`).
-   - Click **Deploy**.
-   - Your application will be live with a production HTTPS URL in under a minute!
+1. **Vercel Link**:
+   
+   [https://english-typing-test-gray.vercel.app/]
 
 ---
 
