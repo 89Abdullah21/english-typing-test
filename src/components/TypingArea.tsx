@@ -63,7 +63,7 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
       const charRect = activeCharRef.current.getBoundingClientRect();
       setCaretPos({
         left: charRect.left - containerRect.left,
-        top: charRect.top - containerRect.top,
+        top: charRect.top - containerRect.top + containerRef.current.scrollTop,
         visible: isFocused,
       });
     } else if (activeWordRef.current) {
@@ -74,13 +74,13 @@ export const TypingArea: React.FC<TypingAreaProps> = ({
         const lastChildRect = lastChild.getBoundingClientRect();
         setCaretPos({
           left: lastChildRect.right - containerRect.left,
-          top: lastChildRect.top - containerRect.top,
+          top: lastChildRect.top - containerRect.top + containerRef.current.scrollTop,
           visible: isFocused,
         });
       } else {
         setCaretPos({
           left: wordRect.left - containerRect.left,
-          top: wordRect.top - containerRect.top,
+          top: wordRect.top - containerRect.top + containerRef.current.scrollTop,
           visible: isFocused,
         });
       }

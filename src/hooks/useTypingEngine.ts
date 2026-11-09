@@ -174,7 +174,15 @@ export function useTypingEngine(initialConfig: TestConfig) {
     (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (isTestCompleted) return;
 
-      // Ignore modifiers
+      // Remove the current word when using Ctrl/Cmd + Backspace.
+      if (e.key === "Backspace" && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+        if (config.soundEnabled) soundEngine.playKeyClick(false, false);
+        setCurrentInput("");
+        return;
+      }
+
+      // Ignore other modifier shortcuts
       if (e.ctrlKey || e.altKey || e.metaKey) return;
 
       // Restart hotkey handled separately (Tab + Enter)

@@ -43,9 +43,10 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
   }).join(" ");
 
   return (
-    <div className="w-full max-w-4xl mx-auto py-8 px-4 animate-in fade-in duration-300">
-      {/* Top Banner / Percentile */}
-      <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-neutral-800">
+    <div className="fixed inset-0 z-30 flex items-center justify-center overflow-y-auto bg-bg-main/55 px-4 py-6 backdrop-blur-sm animate-in fade-in duration-300">
+      <div className="w-full max-w-4xl max-h-[calc(100vh-3rem)] overflow-y-auto rounded-3xl border border-white/10 bg-white/[0.07] p-4 shadow-2xl shadow-black/30 backdrop-blur-2xl sm:p-8">
+        {/* Top Banner / Percentile */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
         <div className="flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary">
             <Trophy className="w-6 h-6" />
@@ -235,10 +236,11 @@ export const ResultsModal: React.FC<ResultsModalProps> = ({
 
         <button
           onClick={onOpenHistory}
-          className="px-5 py-3 rounded-xl bg-bg-sub hover:bg-neutral-800 text-text-sub hover:text-text-main border border-neutral-800 text-sm font-medium transition-colors"
+          className="px-5 py-3 rounded-xl bg-white/[0.06] hover:bg-white/10 text-text-sub hover:text-text-main border border-white/10 text-sm font-medium transition-colors"
         >
           View History
         </button>
+      </div>
       </div>
     </div>
   );
